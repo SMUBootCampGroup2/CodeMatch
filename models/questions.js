@@ -14,12 +14,12 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   
-    Responses.associate = function(models) {
-        Questions.hasMany(models.Responses, {
+    // Questions.associate = function(models) {
+    //     Questions.hasMany(models.Responses, {
 
-        });
-    };
+    //     });
+    // };
   
-    return Responses;
+    return Questions;
   };
   
