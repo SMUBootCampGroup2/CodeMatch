@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+	<title>Registration Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="App Description">
+
+	<!--	Bootstrap	-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+	<header role="header">
+		<h1><a href="../index.html">Code.Match</a></h1>
+		<nav class="user-menu" role="navigation">
+			<div class="username"></div>
+			<div class="dropdown">
+				<div id="logout"></div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ----------------------------------------------------------------------------------------------------------- -->
+
+	<main role="main">
+
+		<div class="container">
+			<h2>Create Account</h2>
+			<div class="container-text">Signing up is free and only takes a few seconds</div>
+			<form>
+				<!--
+			<input type="text" id="fname" placeholder="first name...">
+			<input type="text" id="lname" placeholder="last name...">
+		-->
+				<div class="icon-container">
+					<input class="inputs" type="text" id="username" placeholder="username...">
+					<div class="error-icon js-hidden" id="username-icon" name="alert"></div>
+				</div>
+				<div class="icon-container">
+					<input class="inputs" type="email" id="email" placeholder="email...">
+					<div class="error-icon js-hidden" id="email-icon" name="alert"></div>
+				</div>
+				<div class="icon-container">
+					<input class="inputs" type="password" id="password" placeholder="password...">
+					<!-- 				<ion-icon class="help-icon" name="help-circle"></ion-icon> -->
+					<div class="help-icon" id="password-icon" name="alert"></div>
+					<div class="tooltip-text js-hidden">
+						<h3>Passwords Must meet the following requirements:</h3>
+						<p>&middot; Contain at least one capital and one lowercase letter</p>
+						<p>&middot; Contain at least one numeric character</p>
+						<p>&middot; Contain at least one non-alphanumeric special character</p>
+						<p>&middot; Contain no whitespaces</p>
+						<p>&middot; Be between 6 and 15 characters long</p>
+					</div>
+				</div>
+				<div class="icon-container">
+					<input class="inputs" type="password" id="password-confirm" placeholder="confirm password...">
+					<div class="error-icon js-hidden" id="confirm-icon" name="alert"></div>
+				</div>
+				<button type="submit" id="signup-btn" class="button">Sign Up</button>
+				<p>Already have an account? <a href="login.html">Login</a></p>
+			</form>
+			<div id="errors-display">
+				<!-- 			<div>Please fix the following errors:</div> -->
+			</div>
+		</div>
+
+	</main>
+
+	<footer role="contentinfo">
+
+	</footer>
+
+
+
+<!--	Ion-Icons	-->
+<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+<!--	jQuery	-->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous"></script>
+<!--	Firebase	-->
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script src="firebase.js"></script>
+<!-- login.js -->
+<!-- <script src="login.js"></script> -->
+<!-- auth.js -->
+<script src="auth.js"></script>
+<script>
+
+	var username = '';
+
+	$(document).ready(function () {
+
+		//	Listens for users signing in or out
+		firebase.auth().onAuthStateChanged(function (user) {
+
+			if (user && username != '') {
+				//	User successfully created
+				user.updateProfile({
+					displayName: username
+				}).then(function () {
+					db.ref('users/' + user.uid + '/userInfo').set({
+						displayName: user.displayName,
+						email: user.email
+					});
+
+					sendEmailVerification();
+					window.location.href = '../index.html';
+				}, function (error) {
+					alert(error.message);
+				});
+
+			}
+		});
+
+		$('#signup-btn').click(function (event) {
+			event.preventDefault();
+			signUp();
+		});
+		//	Toggles Help Info on hover
+		$('.help-icon').hover(function () {
+			$('.tooltip-text').removeClass('js-hidden');
+		}, function () {
+			$('.tooltip-text').addClass('js-hidden');
+		});
+	});
+
+</script>
+
+</body>
+</html>
