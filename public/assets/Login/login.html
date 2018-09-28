@@ -30,7 +30,7 @@
 <body>
 	<div class="container">
 		<header role="header">
-			<h1><a href="/public/index.html">CodeMatch</a></h1>
+			<h1><a href="/public/index.html">Code.Match</a></h1>
 			<nav class="user-menu" role="navigation">
 				<div class="username"></div>
 				<div class="dropdown">
@@ -78,24 +78,24 @@
 
 <script>
 
-	$(document).ready(function () {
+	// $(document).ready(function () {
 
-		firebase.auth().onAuthStateChanged(function (user) {
+	// 	firebase.auth().onAuthStateChanged(function (user) {
 
-			if (user) {
-				//	redirect to homepage if logged in
-				window.location.href = '../index.html';
-			} else {
-				//	User is signed out
-				console.log('User is signed out');
-			}
-		});
+	// 		if (user) {
+	// 			//	redirect to homepage if logged in
+	// 			window.location.href = '../index.html';
+	// 		} else {
+	// 			//	User is signed out
+	// 			console.log('User is signed out');
+	// 		}
+	// 	});
 
-		$('#login-btn').click(function (event) {
-			event.preventDefault();
-			signIn();
-		});
-	});
+	// 	$('#login-btn').click(function (event) {
+	// 		event.preventDefault();
+	// 		signIn();
+	// 	});
+	// });
 
 </script>
 
