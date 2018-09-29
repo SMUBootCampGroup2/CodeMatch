@@ -63,24 +63,7 @@ function signUp() {
 	$('#email-icon').addClass('js-hidden');
 	$('#password-icon').text('?').removeClass('error-icon');
 	$('#confirm-icon').addClass('js-hidden');
-	//	email/password validatoins should go here
-	//	Password Requirements (in order as they appear in the regex below):
-	//	At least 1 capital letter
-	//	At least 1 lowercase letter
-	//	No whitespaces
-	//	At least 1 digit
-	//	At least 1 special non-alphanumeric character
-	//	Minimum length 6 characters; Maximum length 15 characters
-/*
-	if(/(?=.*[A-Z])(?=.*[a-z])(?=^\S*$)(?=.*\d)(?=.*[\`\~\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\]\{\}\\\|\;\:\'\"\,\.\<\>\/\?])(^.{6,15}$)/.test(password)) {
-		//	Password meets all validations
-		alert('Password True');
-		return;
-	} else {
-		alert('Password False');
-		return;
-	}
-*/
+	
 	if(username == '') {
 		displayErrors ('username', 'Username required');
 		errors = true;
