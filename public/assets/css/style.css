@@ -1,11 +1,13 @@
 
-*{
+*//*{
 margin: 0;
 padding: 0;
 height: 100%;
 background-color: #e8e8e8;
 
 }
+**/
+
 html,
 body {
     width: 100%;
@@ -127,22 +129,17 @@ a{
 
 /********************SURVEY.HTML STYLING******************************/
 
-h2 {
-    font-size: 1.0 em;
-    font-family: 'VT323', monospace;
-    display: inline-block;
-    text-align: center;
-    position: absolute;
 
-    }
 
     #add-ons {
-    height: 80%;
+    background-repeat: repeat;
     }
 
     #text {
         text-align: center;
 
     }
+
+  
 
     
