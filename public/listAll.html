@@ -11,7 +11,6 @@
 <script>
     $(document).ready(function() {
         var userList = $("tbody");
-        var userContainer = $(".author-container");
 
         getUsers();
 
@@ -37,8 +36,6 @@
         }
 
         function renderUserList(rows) {
-            userList.children().not(":last").remove();
-            userContainer.children(".alert").remove();
             if (rows.length) {
                 console.log(rows);
                 userList.prepend(rows);
@@ -54,15 +51,19 @@
     <ul>
         <li><a href="/">Back</a></li>
     </ul>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>User Name</th>
-                <th>Login Id</th>
-                <th>Responses</th>
-                <th>Is Student</th>
-            </tr>
-        </thead>
-    <tbody>
+    <div class="user-container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Login Id</th>
+                    <th>Responses</th>
+                    <th>Is Student</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
