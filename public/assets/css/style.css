@@ -15,14 +15,14 @@ body {
 
 .img-container {
 
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/background-3503420_1920.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/tutoring\ for\ aspiring\ coders2.png");
     background-size: cover;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
-/* Headline positioning on homepage*/
+/*** Laptop Text and CTA Button***/
 
 .inner-container {
 
@@ -30,7 +30,7 @@ body {
     position: absolute;
     width: 100%;
     color: white;
-    top: 50%;
+    top: 35%;
     left: 38%;
     height: auto;
     
@@ -52,6 +52,7 @@ a{
     
 }
 
+/***CTA BUTTON ****/
 .button {
     display: inline-block;
     padding: 10px;
@@ -60,11 +61,11 @@ a{
     border: 4px solid;
     text-align: center;
     outline: none;
-    margin-top: 380px;
+    margin-top: 300px;
     position: absolute;
-margin-left: 230px;
-transition: background-color 0.2 ease-out;
-height:8%;
+    margin-left: 510px;
+    transition: background-color 0.2 ease-out;
+    height:8%;
 }
 
 .button:hover, .button:active{
@@ -72,31 +73,63 @@ height:8%;
     color: gray;
 }
 
-/* NAV BAR BUTTONS*/
+/************* NAV BAR ****************/
+
+#nav {
+
+    background-color: black;
+    height: 50px;
+    transition: 0.8s all;
+
+}
+
+
 
 .about {
-    margin-top: 20px;
+    margin-top: 10px;
     display: inline-block;
     padding: 10px;
     font-weight: bold;
     color: whitesmoke;
-    border: 1px solid;
     text-align: center;
     outline: none;
-    height: 8%;
- left: 100px;
+    height: 10%;
+    left: 100px;
+    text-decoration: none;
     
 }
 
+
 .bTutor {
     display: inline-block;
-    padding: 10px;
+    padding: px;
     font-weight: bold;
     color: whitesmoke;
-    border: 1px solid;
     text-align: center;
     outline: none;
     height: 8%;
     left: 150px;
-   
+
+}
+
+.login {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 10px;
+        font-weight: bold;
+        color: whitesmoke;
+        text-align: center;
+        outline: none;
+        height: 10%;
+        left: 100px;
+        text-decoration: none;
+}
+
+
+/********************SURVERY.HTML STYLING******************************/
+
+.img {
+
+background-image: url('../images/tutoring\ for\ aspiring\ coders.png');
+
 }
