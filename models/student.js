@@ -16,21 +16,29 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
     email: {
-        type: DataType.STRING,
+        type: DataTypes.STRING,
         allowNull: true,
         validate: {
             isEmail: true
         }
+    }, 
+    username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
     }
     });
   
-    Student.associate = function(models) {
-      // Associating Tutor with Responses
-      // When an Tutor is deleted, also delete any associated Responses
-      Student.hasMany(models.Responses, {
-        onDelete: "cascade"
-      });
-    };
+    // Student.associate = function(models) {
+    //   // Associating Tutor with Responses
+    //   // When an Tutor is deleted, also delete any associated Responses
+    //   Student.hasMany(models.Responses, {
+    //     onDelete: "cascade"
+    //   });
+    // };
   
     return Student;
   };
