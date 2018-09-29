@@ -1,19 +1,21 @@
 
 *{
-margin: 0px;
+margin: 0;
+padding: 0;
 height: 100%;
 background-color: #e8e8e8;
 
 }
-  
+html,
 body {
     width: 100%;
+    height: 100%
 }
   
 
 .img-container {
 
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/business-15822_1920.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/background-3503420_1920.jpg");
     background-size: cover;
     height: 100%;
     background-position: center;
@@ -27,26 +29,74 @@ body {
     text-align: center;
     position: absolute;
     width: 100%;
-    color: black;
+    color: white;
+    top: 50%;
+    left: 38%;
     height: auto;
-    margin-top: 450px;
-
+    
+    transform: translate(-50%, -50%);
 }
 
 h1 {
-font-size: 6.75em;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+font-size: 7.0 em;
+font-family: 'VT323', monospace;
+display: inline-block;
+text-align: center;
+position: absolute;
 }
 
-h2 {
-    margin-top: -17px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+a{
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    
 }
 
-.st-bttn{
-background-color: blue;
-color: white;
-transition: background-color 0.3 ease-in, color 0.3s ease-in;
+.button {
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+    color: whitesmoke;
+    border: 4px solid;
+    text-align: center;
+    outline: none;
+    margin-top: 380px;
+    position: absolute;
+margin-left: 230px;
+transition: background-color 0.2 ease-out;
+height:8%;
+}
 
+.button:hover, .button:active{
+    background-color: #ffffff;
+    color: gray;
+}
+
+/* NAV BAR BUTTONS*/
+
+.about {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+    color: whitesmoke;
+    border: 1px solid;
+    text-align: center;
+    outline: none;
+    height: 8%;
+ left: 100px;
+    
+}
+
+.bTutor {
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+    color: whitesmoke;
+    border: 1px solid;
+    text-align: center;
+    outline: none;
+    height: 8%;
+    left: 150px;
+   
 }
