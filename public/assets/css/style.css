@@ -12,17 +12,16 @@ html,
 body {
     width: 100%;
     height: 100%
-}
-  
+} 
 
 .img-container {
-
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/tutoring\ for\ aspiring\ coders2.png");
+background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/tutoring\ for\ aspiring\ coders2.png");
     background-size: cover;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+  
 }
 /*** Laptop Text and CTA Button***/
 
@@ -35,7 +34,6 @@ body {
     top: 35%;
     left: 38%;
     height: auto;
-    
     transform: translate(-50%, -50%);
 }
 
@@ -143,3 +141,10 @@ a{
   
 
     
+    /*************************ABOUT US STYLING*************************/
+
+    #aboutUs {
+
+
+        
+    }
